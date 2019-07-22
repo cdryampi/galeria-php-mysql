@@ -1,7 +1,6 @@
 <?php
 session_start();
-$_SESSION['seccion'] ="yampi";
-$_SESSION['seccion2'] ="sanchez";
+require "./admin/funcions.php";
 
  ?>
 <!doctype html>
@@ -21,78 +20,10 @@ $_SESSION['seccion2'] ="sanchez";
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <main class="container-fluid">
-
-  <header class="row">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-warning fixed-top">
-      <a href="#" class="navbar-brand"><img src="img/logo-lux.png" id="lux"/></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
-        <span class="navbar-toggle-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a href="#" class="nav-link">Inicio</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Noticias</a>
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">Últimas Noticias</a>
-              <a href="#" class="dropdown-item">Noticas Destacadas</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown" >
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nosotros</a>
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">La empresa</a>
-              <a href="#" class="dropdown-item">Trabaja con nostros</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown" >
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Contacto</a>
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">¿Donde estamos?</a>
-              <a href="#" class="dropdown-item">Servicio al cliente</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <form class="form-inline">
-            <input class="btn btn-danger btn-sm mr-2" data-toggle="modal" data-target="#login" type="button" value="Login">
-            <input class="btn btn-danger btn-sm" data-toggle="modal" data-target="#registro" type="button" value="Registro">
-      </form>
-    </nav>
-  </header>
-
-  <section class="modal" id="login">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg-warning text-write">
-          <div class="modal-title">
-            Entrar en sección
-          </div>
-          <span data-dismiss="modal">X</span>
-          </div>
-          <div class="modal-body">
-            <form  method="post" action="leer.php" role="form" id="enviarPutoPost">
-              <div class="form-group">
-                <label class="col-label-sm control-label">Email:</label>
-                <input class="form-control" name="email" type="email" placeholder="Introduce tu email"/>
-              </div>
-              <div class="form-group">
-                <label class="col-label-sm control-label">Contraseña:</label>
-                <input class="form-control" name="pass" type="password" placeholder="Introduce tu contraseña"/>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <div class="text-right">
-              <input  type="submit" value="Envia" class="btn btn-warning" onclick="form_submit()" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php
+echo Capcelera();
+echo Modal_Login();
+?>
   <section class="modal" id="registro">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">

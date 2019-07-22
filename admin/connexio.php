@@ -1,5 +1,5 @@
 <?php
-$conn =  mysqli_connect('localhost', 'fotos', 'thos','fotos');
+$conn =  mysqli_connect('localhost', 'yampi', 'thos','yampi');
 if (!$conn) {
     die('No pudo conectarse: ' . mysql_error());
 }
